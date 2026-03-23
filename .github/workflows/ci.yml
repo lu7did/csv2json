@@ -21,30 +21,31 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
-          python -m pip install -e .
+          python -m venv .venv313
+          .venv313/bin/python -m pip install --upgrade pip
+          .venv313/bin/python -m pip install -r requirements.txt
+          .venv313/bin/python -m pip install -e .
 
       - name: Ruff
-        run: ruff check src tests
+        run: .venv313/bin/python -m ruff check src tests
 
       - name: Black
-        run: black --check src tests
+        run: .venv313/bin/python -m black --check src tests
 
       - name: MyPy
-        run: mypy src tests
+        run: .venv313/bin/python -m mypy src tests
 
       - name: Pyright
-        run: pyright src tests
+        run: .venv313/bin/python -m pyright src tests
 
       - name: Pytest
-        run: pytest
+        run: .venv313/bin/python -m pytest
 
       - name: Bandit
-        run: bandit -r src
+        run: .venv313/bin/python -m bandit -r src
 
       - name: Build docs
-        run: pdoc --output-directory docs/site src/csv2json
+        run: .venv313/bin/python -m pdoc --output-directory docs/site src/csv2json
 
       - name: Upload docs artifact
         uses: actions/upload-artifact@v4

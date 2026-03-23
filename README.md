@@ -36,8 +36,8 @@ ejemplos/   ejemplos fuera del alcance del workflow
 ## Uso rápido
 
 ```bash
-python3.13 -m venv .venv
-source .venv/bin/activate
+python3.13 -m venv .venv313
+source .venv313/bin/activate
 python -m pip install -r requirements.txt
 python -m pip install -e .
 csv2json ejemplos/sample.csv --output output.json --indent 2
@@ -46,16 +46,18 @@ csv2json ejemplos/sample.csv --output output.json --indent 2
 ## Calidad local
 
 ```bash
-ruff check src tests
-black --check src tests
-mypy src tests
-pyright src tests
-pytest --cov=src/csv2json --cov-fail-under=80
-bandit -r src
+.venv313/bin/python -m pip install -r requirements.txt
+.venv313/bin/python -m pip install -e .
+.venv313/bin/python -m ruff check src tests
+.venv313/bin/python -m black --check src tests
+.venv313/bin/python -m mypy src tests
+.venv313/bin/python -m pyright src tests
+.venv313/bin/python -m pytest --cov=src/csv2json --cov-fail-under=80
+.venv313/bin/python -m bandit -r src
 ```
 
 ## Documentación
 
 ```bash
-pdoc --output-directory docs/site src/csv2json
+.venv313/bin/python -m pdoc --output-directory docs/site src/csv2json
 ```

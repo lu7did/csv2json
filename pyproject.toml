@@ -87,6 +87,8 @@ pythonVersion = "3.13"
 include = ["src", "tests"]
 exclude = ["ejemplos", "script", "docs/site"]
 typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv313"
 
 [tool.bandit]
 exclude_dirs = ["tests", "ejemplos", "script", "docs/site"]
