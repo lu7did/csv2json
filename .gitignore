@@ -1,0 +1,14 @@
+.coverage
+.hypothesis/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.venv313/
+__pycache__/
+build/
+dist/
+docs/site/
+htmlcov/
+src/*.egg-info/
+src/**/*.pyc
