@@ -1,6 +1,6 @@
 # csv2json
 
-`csv2json` es un paquete y CLI para convertir archivos CSV a JSON de manera segura, tipada y testeada.
+`csv2json` es un paquete para convertir archivos CSV a JSON.
 
 ## Estado
 
