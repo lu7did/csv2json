@@ -1,7 +1,10 @@
 # csv2json
 
 `csv2json` es un paquete para convertir archivos CSV a JSON.
-Proyecto de prueba para materia Calidad de Software - UFASTA - Mar del Plata
+Proyecto de prueba para mostrar elementos de integración continua 
+Pra materia Calidad de Software - UFASTA - Mar del Plata
+
+Copyright (C) Dr. Pedro E. Colla 2026
 
 Este programase encuentra bajo una Licencia Creative Commons Atribución-NoComercial 4.0  Internacional.
 Permite: Compartir, adaptar y modificar sin fines comerciales, citando al autor. 
